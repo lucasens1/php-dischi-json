@@ -3,8 +3,7 @@ const { createApp } = Vue;
 createApp({
     data(){
         return{
-            diskList : [],
-            isFav : false
+            diskList : []
         }
     },
     created(){

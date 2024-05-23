@@ -31,6 +31,7 @@
                                     <h3 class="ms_mt-1 ms_p-1">{{ disk.title }}</h3>
                                     <p class="ms_mt-1 ms_p-1 ms_fs-med">{{ disk.author }}</p>
                                     <p class="ms_mt-1 ms_p-1 ms_fs-med">{{ disk.year }}</p>
+                                    <span @click="" :class="{ liked : disk.isfav }">&hearts;</span>
                                 </div>
                             </div>
                         </div>
