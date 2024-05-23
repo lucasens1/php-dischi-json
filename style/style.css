@@ -1,0 +1,36 @@
+* {
+    padding : 0;
+    margin : 0;
+    box-sizing: border-box;
+}
+/* COMMON */
+.wrapper{
+    width: 100%;
+    height: 100vh;
+    border: 5px solid red;
+}
+.ms_header{
+    min-height: 70px;
+    width: 100%;
+    border: 5px solid violet;
+}
+
+.ms_w-80-container{
+    margin: 0 auto;
+    width: 80%;
+    /*Da sottrarre anche il bordo */
+    height: calc(100vh - 70px);
+    border: 5px solid green;
+}
+.ms_row{
+    width: 100%;
+    height: 100%;
+    border: 5px solid blue;
+}
+/* UTILITIES */
+.ms_mt-1{
+    margin-top: 10px;
+}
+.ms_mt-2{
+    margin-top: 20px;
+}
