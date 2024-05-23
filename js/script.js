@@ -3,7 +3,8 @@ const { createApp } = Vue;
 createApp({
     data(){
         return{
-            diskList : []
+            diskList : [],
+            liked_disks : []
         }
     },
     created(){
@@ -14,9 +15,12 @@ createApp({
         });
     },
     methods : {
-        likeUnlike(isDisk){
-            isDisk.isLiked = !isDisk.isLiked;
-            console.log(isDisk.isLiked);
-        }
-    }
+        likeUnlike(disk){
+            disk.isLiked = !disk.isLiked;
+            console.log(disk.isLiked);
+            if(disk.isLiked){
+
+            }
+		},
+    },
 }).mount("#app");

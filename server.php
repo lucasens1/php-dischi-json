@@ -1,5 +1,6 @@
 <?php
 include_once "./partials/functions.php";
+
 # 1. Estrapolo i dati (Array) nel JSON
 $disk_list_string = file_get_contents("dischi.json");
 $disk_list = json_decode($disk_list_string, true);
@@ -9,6 +10,8 @@ $disk_list = json_decode($disk_list_string, true);
 for( $i = 0; $i < count($disk_list); $i++){
     $disk_list[$i]["isLiked"] = false;
 }
+#------------------------
+# BONUS 2 creo un array che popolo con quelli con isLiked True
 # 3. Creo un'array associativo che in JS diverrà Object
 $disk_data = [
     "disks" => $disk_list

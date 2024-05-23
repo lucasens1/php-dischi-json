@@ -21,6 +21,7 @@
     width: 100%;
     background-color:  var(--header_color);
     position: fixed;
+    z-index: 999;
     display: flex;
     align-items: center;
     /*DEBUG*/
