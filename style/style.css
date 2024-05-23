@@ -1,36 +1,94 @@
+:root{
+    --header_color : #06131f;
+    --wrapper_color : #1d2d3c;
+    --card_color : #112030;
+}
 * {
     padding : 0;
     margin : 0;
     box-sizing: border-box;
+    font-family: "Radio Canada Big", sans-serif;
 }
 /* COMMON */
 .wrapper{
     width: 100%;
-    height: 100vh;
-    border: 5px solid red;
+    background-color: var(--wrapper_color);
+    /*DEBUG*/
+    /* border: 5px solid red; */
 }
 .ms_header{
-    min-height: 70px;
+    height: 70px;
     width: 100%;
-    border: 5px solid violet;
+    background-color:  var(--header_color);
+    position: fixed;
+    display: flex;
+    align-items: center;
+    /*DEBUG*/
+    /* border: 5px solid violet; */
+}
+.ms_header img{
+    margin-left: 15px;
+    height: 50px;
+    width: 50px;
 }
 
-.ms_w-80-container{
+.ms_w-90-container{
     margin: 0 auto;
-    width: 80%;
-    /*Da sottrarre anche il bordo */
-    height: calc(100vh - 70px);
-    border: 5px solid green;
+    width: 90%;
+    padding: 80px 0px;
+    /*DEBUG*/
+    /* border: 5px solid green; */
 }
 .ms_row{
     width: 100%;
     height: 100%;
-    border: 5px solid blue;
+    /*DEBUG*/
+    /* border: 5px solid blue; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 80px;
 }
+
+.col-3{
+    width: calc(100% / 3);
+    padding: 25px;
+    /*DEBUG*/
+    /* border: 5px solid black; */
+}
+.ms_card{
+    width: 100%;
+    display: flex;
+    border-radius: 50px;
+    padding: 30px 0;
+    background-color: var(--card_color);
+    color: white;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ms_card img{
+    max-width: 50%;
+    
+}
+
 /* UTILITIES */
 .ms_mt-1{
     margin-top: 10px;
 }
 .ms_mt-2{
     margin-top: 20px;
+}
+.ms_text-center{
+    text-align: center;
+}
+.ms_p-2{
+    padding: 16px;
+}
+.ms_p-1{
+    padding: 8px;
+}
+.ms_fs-med{
+    font-size: 1.2rem;
 }

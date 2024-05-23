@@ -10,18 +10,31 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <!-- VUE.JS -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- Font Family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Radio+Canada+Big:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+
 
 </head>
 <body>
     <div class="wrapper">
         <header class="ms_header">
-            <img src="" alt="">
+            <img src="./img/logo-spotify.png" alt="">
         </header>
-            <div id="app" class="ms_w-80-container">
+            <div id="app" class="ms_w-90-container">
                     <div class="ms_row ms_mt-1">
-                        <div class="col-3">
+                        <div class="col-3" v-for="disk in diskList">
+                            <div class="ms_card" >
+                                <img :src="disk.poster" alt="disc-cover">
+                                <div class="ms_card-body ms_text-center">
+                                    <h3 class="ms_mt-1 ms_p-1">{{ disk.title }}</h3>
+                                    <p class="ms_mt-1 ms_p-1 ms_fs-med">{{ disk.author }}</p>
+                                    <p class="ms_mt-1 ms_p-1 ms_fs-med">{{ disk.year }}</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
             </div>
     </div>
 
