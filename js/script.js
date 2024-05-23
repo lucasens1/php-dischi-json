@@ -18,8 +18,12 @@ createApp({
         likeUnlike(disk){
             disk.isLiked = !disk.isLiked;
             console.log(disk.isLiked);
+            console.log(this.diskList);
             if(disk.isLiked){
-
+                let pushedDisk = { ...disk };
+                //Pusho nei liked_disks
+                this.liked_disks.push(pushedDisk);
+                console.log(this.liked_disks);
             }
 		},
     },
