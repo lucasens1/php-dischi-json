@@ -5,6 +5,10 @@ $disk_list_string = file_get_contents("dischi.json");
 $disk_list = json_decode($disk_list_string, true);
 # 2. Controllo la corretta estrazione dei dati
 /* var_dump($disk_list); */
+# BONUS 1 Like Aggiungo una nuova proprietà isLiked ad ogni disco
+for( $i = 0; $i < count($disk_list); $i++){
+    $disk_list[$i]["isLiked"] = false;
+}
 # 3. Creo un'array associativo che in JS diverrà Object
 $disk_data = [
     "disks" => $disk_list

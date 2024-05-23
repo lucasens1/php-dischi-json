@@ -14,6 +14,9 @@ createApp({
         });
     },
     methods : {
-
+        likeUnlike(isDisk){
+            isDisk.isLiked = !isDisk.isLiked;
+            console.log(isDisk.isLiked);
+        }
     }
 }).mount("#app");
