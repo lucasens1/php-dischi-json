@@ -24,14 +24,14 @@
         </header>
             <div id="app" class="ms_w-90-container">
                     <div class="ms_row ms_mt-1">
-                        <div class="col-3" v-for="disk in diskList">
+                        <div class="col-3" v-for="(disk, i) in diskList">
                             <div class="ms_card" >
                                 <img :src="disk.poster" alt="disc-cover">
                                 <div class="ms_card-body ms_text-center">
                                     <h3 class="ms_mt-1 ms_p-1">{{ disk.title }}</h3>
                                     <p class="ms_mt-1 ms_p-1 ms_fs-med">{{ disk.author }}</p>
                                     <p class="ms_mt-1 ms_p-1 ms_fs-med">{{ disk.year }}</p>
-                                    <span @click="likeUnlike(disk)" :class="{ liked : disk.isLiked }">&hearts;</span>
+                                    <span @click="likeUnlike(i)" :class="{ liked : disk.isLiked }">&hearts;</span>
                                 </div>
                             </div>
                         </div>
