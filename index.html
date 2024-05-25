@@ -18,13 +18,17 @@
 
 </head>
 <body>
-    <div class="wrapper">
+    <div class="wrapper" id="app">
         <header class="ms_header">
             <img src="./img/logo-spotify.png" alt="">
+            <select v-model="option "class="primary-btn" @change="handleChange()">
+                <option value="all">Tutti</option>
+                <option value="liked_ones">Preferiti</option>
+            </select>
         </header>
-            <div id="app" class="ms_w-90-container">
+            <div class="ms_w-90-container">
                     <div class="ms_row ms_mt-1">
-                        <div class="col-3" v-for="(disk, i) in diskList">
+                        <div class="col-3" v-for="(disk, i) in filtered_disks">
                             <div class="ms_card" >
                                 <img :src="disk.poster" alt="disc-cover">
                                 <div class="ms_card-body ms_text-center">
